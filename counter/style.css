@@ -1,0 +1,9 @@
+.main-div{
+width: 100vh;
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #344151;
+}
