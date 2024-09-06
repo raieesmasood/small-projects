@@ -17,6 +17,7 @@ let password = "";
 let passwordlength = 10;
 let checkCount = 0;
 handleSlider();
+setIndicator("#ccc");
 //set circle color to grey
 
 //set password length according to slider
