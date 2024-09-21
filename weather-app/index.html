@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="index.css" />
+  <body>
+    <div class="wrapper">
+      <h1>Weather App</h1>
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+      </div>
+      <div class="weather-container">
+        <!-- Grant location container -->
+        <div class="grant-location-container">
+          <img
+            src="./images/location.png"
+            alt="location"
+            width="80"
+            height="80"
+            loading="lazy"
+          />
+          <p>Grant Location Access</p>
+          <p>Allow Access To Get Weather Information</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+
+        <!-- search form -->
+
+        <form class="form-container" data-searchForm>
+          <input placeholder="Search for City..." data-searchInput />
+          <button class="btn">
+            <img
+              src="./images/search.png"
+              alt="search"
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+          </button>
+        </form>
+
+        <!-- loading screen container -->
+        <div class="loading-container">
+          <img
+            src="./images/loading.gif"
+            alt="loading"
+            width="150"
+            height="150"
+          />
+          <p>Loading...</p>
+        </div>
+
+        <!-- Show weather info search and user tab -->
+        <div class="user-info-container">
+          <!-- city name and flag -->
+          <div class="name">
+            <p data-cityName></p>
+            <img data-countryIcon />
+          </div>
+          <!-- weather desc -->
+          <p data-weatherDesc></p>
+          <!-- icon -->
+          <img data-weatherIcon />
+          <!-- temp -->
+          <p data-temp></p>
+
+
+          <!-- 3 cards parameter -->
+
+          <div class="parameter-continer">
+            <!-- card 1 -->
+             <div class="parameter">
+                <img src="./images/wind.png" alt="wind">
+                <p>Wind Speed</p>
+                <p data-windspeed></p>
+             </div>
+            <!-- card 2 -->
+             <div class="parameter">
+                <img src="./images/humidity.png">
+                <p>Humidity</p>
+                <p data-humidity></p>
+             </div>
+            <!-- card 1 -->
+             <div class="parameter">
+                <img src="./images/cloud.png">
+                <p>Cloud</p>
+                <p data-cloudiness></p>
+             </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
