@@ -100,10 +100,10 @@ function renderWeatherInfo(weatherInfo) {
   countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
   desc.innerText = weatherInfo?.weather?.[0]?.description;
   weatherIcon.src = `https://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
-  temp.innerText = weatherInfo?.main?.temp;
-  windspeed.innerText = weatherInfo?.wind?.speed;
-  humidity.innerText = weatherInfo?.main?.humidity;
-  cloudliness.innerText = weatherInfo?.clouds?.all;
+  temp.innerText = `${weatherInfo?.main?.temp}°C`;
+  windspeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
+  humidity.innerText = `${weatherInfo?.main?.humidity} %`;
+  cloudliness.innerText =`${weatherInfo?.clouds?.all} %` ;
 }
 
 // geolocation
@@ -113,6 +113,23 @@ function getLocation() {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
     console.log("No geoLocation Support");
+  }
+}
+
+function showError(error) {
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      alert("User denied the request for Geolocation.");
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert("Location information is unavailable.");
+      break;
+    case error.TIMEOUT:
+      alert("The request to get user location timed out.");
+      break;
+    case error.UNKNOWN_ERROR:
+      alert("An unknown error occurred.");
+      break;
   }
 }
 
@@ -152,7 +169,14 @@ async function fetchSearchWeatherInfo(city) {
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
         );
         const data = await response.json();
-        console.log(data);
+
+
+    if (data.cod !== 200) {
+      alert(data.message); // Display error message (e.g., city not found)
+      loadingScreen.classList.remove("active");
+      return;
+    }
+
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
 

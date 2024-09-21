@@ -13,30 +13,27 @@
 }
 
 .wrapper{
-    background-position: center center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    width: 100vw;
-    height: 120vh;
+    width:100vw;
+    height:100vh;
     color: var(--colorLight2);
     background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);;
 }
-h1{
+
+h1 {
     text-align: center;
-    text-transform: uppercase;
-    /* margin-top: 20px; */
+    text-transform:uppercase;
     padding-top: 20px;
 }
 
-.tab-container{
-    display: flex;
-    justify-content: space-between;
+.tab-container {
+    width:90%;
     max-width: 550px;
     margin: 0 auto;
-    width: 90%; 
-    /* normal case */
     margin-top: 4rem;
-    /* 1rem 16 px */
+    display: flex;
+    justify-content: space-between;
 }
+
 .tab{
     cursor: pointer;
     font-size: 0.875rem;
@@ -50,17 +47,10 @@ h1{
 }
 
 .weather-container{
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-    margin-block: 4rem;
-
-
+    margin-block:4rem;
 }
+
 .btn{
-    /* remove default properties of button*/
     all: unset;
     /* appearance: none;
     border:none;
@@ -80,14 +70,14 @@ h1{
     align-items: center;
 }
 
-
 .grant-location-container{
-    display:none; 
+     display:none; 
 }
 
 .grant-location-container.active{
-   display:flex;
+    display:flex;
 }
+
 .grant-location-container img{
     margin-bottom: 2rem;
 }
@@ -97,10 +87,9 @@ h1{
     font-weight: 600; 
 }
 
-
 .grant-location-container p:last-of-type{
-    font-size: 0.85rem;
-    font-weight: 500; 
+    font-size:0.85rem;
+    font-weight: 500;
     margin-top: 0.75rem;
     margin-bottom: 1.75rem;
     letter-spacing: 0.75px;
@@ -142,19 +131,20 @@ h1{
     width:90px;
     height:90px;
 }
+
 .name p{
-    font-size:2rem;
+        font-size:2rem;
 }
 
 .name img{
-width: 30px;
-height:30px;
-object-fit: contain;
+    width: 30px;
+    height:30px;
+    object-fit: contain;
 }
 
 .user-info-container p[data-temp] {
-font-size:2.75rem;
-font-weight:700;
+    font-size:2.75rem;
+    font-weight:700;
 }
 
 .parameter-container{
@@ -165,6 +155,7 @@ font-weight:700;
     align-items: center;
     margin-top: 2rem;
 }
+
 .parameter{
     width:30%;
     max-width:200px;
@@ -174,7 +165,7 @@ font-weight:700;
     display: flex;
     flex-direction: column;
     gap:5px 0;
-    /* justify-content: baseline; */
+    /* justify-content: space-between; */
     align-items: center; 
 }   
 
@@ -196,7 +187,6 @@ font-weight:700;
 
 .form-container{
     display: none;
-    /* display: flex; */
     width:90%;
     max-width:550px;
     margin:0 auto;
@@ -236,6 +226,4 @@ font-weight:700;
     justify-content: center;
     border-radius: 100%;
     margin-bottom:1px;
-    margin-left: 3px;
 }
-

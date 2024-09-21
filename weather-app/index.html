@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
   <body>
     <div class="wrapper">
@@ -15,7 +18,7 @@
       </div>
       <div class="weather-container">
         <!-- Grant location container -->
-        <div class="grant-location-container">
+        <div class="sub-container grant-location-container">
           <img
             src="./images/location.png"
             alt="location"
@@ -44,7 +47,7 @@
         </form>
 
         <!-- loading screen container -->
-        <div class="loading-container">
+        <div class=" sub-container loading-container">
           <img
             src="./images/loading.gif"
             alt="loading"
@@ -55,7 +58,7 @@
         </div>
 
         <!-- Show weather info search and user tab -->
-        <div class="user-info-container">
+        <div class="sub-container user-info-container">
           <!-- city name and flag -->
           <div class="name">
             <p data-cityName></p>
@@ -71,11 +74,11 @@
 
           <!-- 3 cards parameter -->
 
-          <div class="parameter-continer">
+          <div class="parameter-container">
             <!-- card 1 -->
              <div class="parameter">
                 <img src="./images/wind.png" alt="wind">
-                <p>Wind Speed</p>
+                <p>WindSpeed</p>
                 <p data-windspeed></p>
              </div>
             <!-- card 2 -->
@@ -84,7 +87,7 @@
                 <p>Humidity</p>
                 <p data-humidity></p>
              </div>
-            <!-- card 1 -->
+            <!-- card 3 -->
              <div class="parameter">
                 <img src="./images/cloud.png">
                 <p>Cloud</p>
