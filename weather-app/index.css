@@ -164,6 +164,7 @@ font-weight:700;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 .parameter{
     width:30%;
